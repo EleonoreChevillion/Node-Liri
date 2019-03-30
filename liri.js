@@ -128,7 +128,9 @@ function readText() {
   });
 }
 
-fs.writeFile("log.txt", command, searchString, err => {
+var input = command + " " + searchString + "\n";
+
+fs.appendFile("log.txt", input, err => {
   if (err) {
     return console.log(err);
   }
