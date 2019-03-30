@@ -129,7 +129,6 @@ function readText() {
 }
 
 var input = command + " " + searchString + "\n";
-
 fs.appendFile("log.txt", input, err => {
   if (err) {
     return console.log(err);
